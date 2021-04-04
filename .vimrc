@@ -19,7 +19,7 @@ call dein#add('/Users/okitsu/.cache/dein/repos/github.com/Shougo/dein.vim')
 call dein#add('raphamorim/lucario')
   " ~~~ ここからtomlファイルを利用するための設定 ~~~
   " 導入するプラグインを記載したtomlファイルのパスを記載する
-   let s:toml_dir  = $HOME . '/.vim/rc' 
+   let s:toml_dir  = $HOME . '/dotfiles/.vim/rc' 
    let s:toml      = s:toml_dir . '/dein.toml'
    let s:lazy_toml = s:toml_dir . '/dein_lazy.toml'
   
@@ -194,6 +194,20 @@ imap <C-j> <esc>
 imap [ []<left>
 imap ( ()<left>
 imap { {}<left>
+imap ' ''<left>
+imap " ""<left>
+
+" 画面分割系
+nnoremap sj <C-w>j
+nnoremap sk <C-w>k
+nnoremap sl <C-w>l
+nnoremap sh <C-w>h
+nnoremap ss :<C-u>sp<CR><C-w>j
+nnoremap sv :<C-u>vs<CR><C-w>l
+
+" クオーテーションの補完
+inoremap ' ''<LEFT>
+inoremap " ""<LEFT>
 
 " ２回esc を押したら検索のハイライトをヤメる
 nmap <Esc><Esc> :nohlsearch<CR><Esc>
